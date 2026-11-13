@@ -1,4 +1,3 @@
-import skullEmblem from '../../assets/Skull PvP_ Crimson Voxel Arena.png'
 import { getExternalUrl, serverInfo } from '../data/serverInfo'
 
 function Hero() {
@@ -6,13 +5,6 @@ function Hero() {
 
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
-      <img
-        className="hero-art"
-        src={skullEmblem}
-        alt="Skull PvP skull-and-swords emblem"
-        fetchPriority="high"
-      />
-      <div className="hero-scrim" aria-hidden="true" />
       <div className="hero-content container">
         <p className="eyebrow">
           <span className="eyebrow-mark" aria-hidden="true" />

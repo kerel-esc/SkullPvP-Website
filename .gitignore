@@ -23,6 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Keep local source uploads out of Git; allow only the emblem used by the site.
-/assets/*
-!/assets/Skull PvP_ Crimson Voxel Arena.png
+# Keep local source uploads and reference files out of Git.
+/assets/

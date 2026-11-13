@@ -38,5 +38,4 @@ The homepage steps and rules preview, plus the separate screenshot gallery and
 full rules page, are reusable components in `src/components/`. The gallery is
 available at `/gallery.html` and the rules at `/rules.html`. Optimized
 screenshots are in `public/gallery/`. Original uploads and server reference
-documents under `assets/` are excluded from Git; only the emblem required by
-the homepage is included.
+documents under `assets/` are excluded from Git.
