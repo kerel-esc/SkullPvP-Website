@@ -35,7 +35,8 @@ Store buttons open the configured store URL. No shop, checkout, login, or
 payment flow is included.
 
 The homepage steps and rules preview, plus the separate screenshot gallery and
-full rules page, are reusable components in `src/components/`. The gallery is
-available at `/gallery.html` and the rules at `/rules.html`. Optimized
-screenshots are in `public/gallery/`. Original uploads and server reference
-documents under `assets/` are excluded from Git.
+full rules page, are reusable components in `src/components/`. The gallery at
+`/gallery.html` opens each screenshot in a scaled in-page preview, and the full
+rules are at `/rules.html`. Optimized screenshots are in `public/gallery/`.
+Original uploads and server reference documents under `assets/` are excluded
+from Git.

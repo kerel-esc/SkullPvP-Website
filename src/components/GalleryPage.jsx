@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import Reveal from './Reveal'
 
 const screenshots = [
@@ -44,6 +45,19 @@ const screenshots = [
 ]
 
 function GalleryPage() {
+  const [activeScreenshot, setActiveScreenshot] = useState(null)
+  const previewDialogRef = useRef(null)
+
+  useEffect(() => {
+    const dialog = previewDialogRef.current
+
+    if (activeScreenshot && dialog && !dialog.open) {
+      dialog.showModal()
+    } else if (!activeScreenshot && dialog && dialog.open) {
+      dialog.close()
+    }
+  }, [activeScreenshot])
+
   return (
     <>
       <div className="page-top-space" />
@@ -67,11 +81,11 @@ function GalleryPage() {
                 key={screenshot.src}
                 delay={(index % 3) * 70}
               >
-                <a
-                  href={screenshot.src}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Open full-size ${screenshot.label.toLowerCase()} screenshot ${index + 1}`}
+                <button
+                  className="screenshot-preview-trigger"
+                  type="button"
+                  aria-label={`Preview ${screenshot.label.toLowerCase()} screenshot ${index + 1}`}
+                  onClick={() => setActiveScreenshot(screenshot)}
                 >
                   <img
                     src={screenshot.src}
@@ -81,16 +95,50 @@ function GalleryPage() {
                     loading={index < 3 ? 'eager' : 'lazy'}
                     decoding="async"
                   />
-                  <figcaption>
-                    <span>{screenshot.label}</span>
-                    <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-                  </figcaption>
-                </a>
+                </button>
+                <figcaption>
+                  <span>{screenshot.label}</span>
+                  <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                </figcaption>
               </Reveal>
             ))}
           </div>
         </section>
       </main>
+      <dialog
+        ref={previewDialogRef}
+        className="image-preview-dialog"
+        aria-labelledby="image-preview-title"
+        onClose={() => setActiveScreenshot(null)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) {
+            event.currentTarget.close()
+          }
+        }}
+      >
+        {activeScreenshot && (
+          <>
+            <div className="image-preview-header">
+              <h2 className="image-preview-title" id="image-preview-title">
+                Screenshot preview
+              </h2>
+              <button
+                className="image-preview-close"
+                type="button"
+                aria-label="Close screenshot preview"
+                onClick={() => previewDialogRef.current?.close()}
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <img
+              className="image-preview-image"
+              src={activeScreenshot.src}
+              alt={activeScreenshot.alt}
+            />
+          </>
+        )}
+      </dialog>
     </>
   )
 }
