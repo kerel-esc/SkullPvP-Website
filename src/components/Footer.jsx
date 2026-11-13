@@ -4,6 +4,7 @@ const footerLinks = [
   { href: '/#about', label: 'How to play' },
   { href: '/gallery.html', label: 'Screenshots' },
   { href: '/rules.html', label: 'Rules' },
+  { href: '/staff.html', label: 'Staff' },
 ]
 
 function Footer() {

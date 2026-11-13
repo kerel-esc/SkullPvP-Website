@@ -1,7 +1,7 @@
 export const serverInfo = {
   name: 'Skull PvP',
   ip: 'SkullPvP.mc.gg',
-  discord: 'https://discord.gg/W59MqMBafU',
+  discord: 'https://discord.gg/b9D9bQGJ5M',
   store: 'https://skull-pvp.tebex.store/',
 }
 

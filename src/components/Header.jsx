@@ -62,6 +62,7 @@ function Header() {
           <a href={aboutSection} onClick={closeMenu}>How to play</a>
           <a href="/gallery.html" onClick={closeMenu}>Screenshots</a>
           <a href="/rules.html" onClick={closeMenu}>Rules</a>
+          <a href="/staff.html" onClick={closeMenu}>Staff</a>
           <a
             className="discord-nav-link"
             href={discordUrl || '#connect'}

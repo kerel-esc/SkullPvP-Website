@@ -13,6 +13,7 @@ export default defineConfig({
         main: resolve(rootDirectory, 'index.html'),
         gallery: resolve(rootDirectory, 'gallery.html'),
         rules: resolve(rootDirectory, 'rules.html'),
+        staff: resolve(rootDirectory, 'staff.html'),
       },
     },
   },

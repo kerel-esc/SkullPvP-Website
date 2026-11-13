@@ -20,8 +20,8 @@ Import this repository into Vercel and use the Vite defaults, or set:
 - Build command: `npm run build`
 - Output directory: `dist`
 
-The production build includes the homepage, `/gallery.html`, and `/rules.html`.
-No custom rewrites are required.
+The production build includes the homepage, `/gallery.html`, `/rules.html`, and
+`/staff.html`. No custom rewrites are required.
 
 ## Server details
 
@@ -37,6 +37,7 @@ payment flow is included.
 The homepage steps and rules preview, plus the separate screenshot gallery and
 full rules page, are reusable components in `src/components/`. The gallery at
 `/gallery.html` opens each screenshot in a scaled in-page preview, and the full
-rules are at `/rules.html`. Optimized screenshots are in `public/gallery/`.
-Original uploads and server reference documents under `assets/` are excluded
-from Git.
+rules and staff pages are at `/rules.html` and `/staff.html`. The staff profile
+uses the deployable avatar in `public/staff/`; optimized screenshots are in
+`public/gallery/`. Original uploads and server reference documents under
+`assets/` are excluded from Git.
