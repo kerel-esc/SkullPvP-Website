@@ -8,7 +8,7 @@ function Hero() {
       <div className="hero-content container">
         <p className="eyebrow">
           <span className="eyebrow-mark" aria-hidden="true" />
-          Minecraft PvP <span aria-hidden="true">/</span> Fair play first
+          Minecraft {serverInfo.edition} · {serverInfo.version}
         </p>
         <h1 id="hero-title">
           Skull

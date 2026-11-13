@@ -28,6 +28,8 @@ The production build includes the homepage, `/gallery.html`, `/rules.html`, and
 Edit `src/data/serverInfo.js` to update the server details:
 
 - `ip`: `SkullPvP.mc.gg`
+- `edition`: `Java Edition`
+- `version`: `26.3`
 - `discord`: the supplied invite is already configured.
 - `store`: the supplied Tebex link is already configured.
 

@@ -1,11 +1,11 @@
 import Reveal from './Reveal'
+import { serverInfo } from '../data/serverInfo'
 
 const principles = [
   {
     number: '01',
     title: 'Launch your Minecraft client',
-    description:
-      'Make sure you are playing on Minecraft version 26.3.',
+    description: `Use Minecraft ${serverInfo.edition}, version ${serverInfo.version}.`,
   },
   {
     number: '02',

@@ -19,6 +19,12 @@ function FinalCta() {
                 <span className="detail-label">Server address</span>
                 <span className="detail-value">{serverInfo.ip}</span>
               </div>
+              <div className="connection-detail">
+                <span className="detail-label">Edition &amp; version</span>
+                <span className="detail-value">
+                  {serverInfo.edition} · {serverInfo.version}
+                </span>
+              </div>
             </div>
           </div>
           <div className="cta-action" id="store">
